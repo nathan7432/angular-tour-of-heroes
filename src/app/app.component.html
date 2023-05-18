@@ -1,7 +1,16 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
+<h1 class="text-xl font-bold mb-4 text-[#2E9F48] flex justify-center">
+  {{title}}
+</h1>
+<nav class="flex justify-center gap-2">
+  <a routerLink="/dashboard" class="text-white hover:bg-[#38b555] bg-[#2E9F48] rounded-md p-1">
+    Dashboard
+  </a>
+  <a routerLink="/heroes" class="text-white hover:bg-[#38b555] bg-[#2E9F48] rounded-md p-1">
+    Heroes
+  </a>
 </nav>
-<router-outlet />
-<app-messages />
+
+<div class="flex justify-center">
+  <router-outlet />
+  <app-messages />
+</div>

@@ -1,9 +1,13 @@
-<h2>My Heroes</h2>
-<ul class="heroes">
-  <li *ngFor="let hero of heroes">
+<h2 class="text-lg font-bold mt-4 text-[#2E9F48] flex justify-center">My Heroes</h2>
+<ul class="flex flex-col">
+  <li *ngFor="let hero of heroes" class="m-2">
     <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{hero.id}}</span>
-      {{hero.name}}
+      <div class="flex">
+        <span class="bg-gray-200 text-lg p-1 rounded-l-lg border-black border-2">{{hero.id}}</span>
+        <span
+          class="grow bg-[#2E9F48] text-white text-lg p-1 rounded-r-lg border-black border-y-2 border-r-2">{{hero.name}}</span>
+      </div>
+
     </a>
   </li>
 </ul>
